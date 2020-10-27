@@ -12,7 +12,7 @@ describe('<TraineeList/>', () => {
       id: 2,
       name: 'traineeB',
     };
-    const nameCard = render(<TraineeList trainees={[traineeA, traineeB]} />);
-    expect(nameCard.getAllByText(/\d\..+/)).toHaveLength(2);
+    const component = render(<TraineeList trainees={[traineeA, traineeB]} />);
+    expect(component.getAllByText(/\d\..+/)).toHaveLength(2);
   });
 });

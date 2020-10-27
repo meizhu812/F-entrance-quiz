@@ -8,7 +8,7 @@ describe('<TraineeCard/>', () => {
       id: 'someId',
       name: 'someName',
     };
-    const nameCard = render(<TraineeCard trainee={trainee} />);
-    expect(nameCard.getByText('someId. someName')).toBeInTheDocument();
+    const component = render(<TraineeCard trainee={trainee} />);
+    expect(component.getByText('someId. someName')).toBeInTheDocument();
   });
 });
