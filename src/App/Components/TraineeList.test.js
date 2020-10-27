@@ -3,6 +3,11 @@ import React from 'react';
 import TraineeList from './TraineeList';
 
 describe('<TraineeList/>', () => {
+  it('should show empty list', () => {
+    const component = render(<TraineeList trainees={{}} />);
+    expect(component.queryByText(/\d\..+/)).toBeNull();
+  });
+
   it('should show all trainees', () => {
     const traineeA = {
       id: 1,

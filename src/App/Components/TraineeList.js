@@ -5,9 +5,8 @@ export default function TraineeList(props) {
   const { trainees } = props;
   return (
     <div>
-      {trainees.map((trainee) => (
-        <TraineeCard key={trainee.id} trainee={trainee} />
-      ))}
+      {trainees?.length > 0 &&
+        trainees.map((trainee) => <TraineeCard key={trainee.id} trainee={trainee} />)}
     </div>
   );
 }

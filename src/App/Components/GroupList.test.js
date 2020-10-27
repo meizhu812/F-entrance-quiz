@@ -3,6 +3,10 @@ import React from 'react';
 import GroupList from './GroupList';
 
 describe('<GroupList/>', () => {
+  it('should render empty list', () => {
+    const component = render(<GroupList groups={{}} />);
+    expect(component.queryByText(/\d 组/)).toBeNull();
+  });
   it('should show all groups', () => {
     const groupA = {
       sequence: 1,
