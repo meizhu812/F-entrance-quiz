@@ -3,12 +3,12 @@ import './AddTrainee.css';
 
 export default function AddTrainee(props) {
   const [status, setStatus] = useState('OFF');
-  const { addTrainee } = props;
+  const { handleAddTrainee } = props;
 
   const handleKeyUp = (event) => {
     event.preventDefault();
     if (event.keyCode === 13) {
-      addTrainee(event.target.value);
+      handleAddTrainee(event.target.value);
       setStatus('OFF');
     }
   };

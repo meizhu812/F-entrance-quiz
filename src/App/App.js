@@ -8,7 +8,7 @@ import './App.css';
 export default function App() {
   const [trainees, setTrainees] = useState(getLocalStorage('trainees'));
   const [groups, setGroups] = useState(getLocalStorage('groups'));
-  const addTrainee = (trainee) => {
+  const handleAddTrainee = (trainee) => {
     fetch('http://localhost:8080/trainees', {
       method: 'POST',
       body: trainee,
@@ -45,7 +45,7 @@ export default function App() {
       </section>
       <section>
         <p className="section-title">学员列表</p>
-        <TraineeList trainees={trainees} addTrainee={addTrainee} />
+        <TraineeList trainees={trainees} handleAddTrainee={handleAddTrainee} />
       </section>
     </div>
   );
