@@ -1,0 +1,13 @@
+.group-box {
+  border: 1px solid #929aab;
+  margin: 16px;
+}
+
+.group-title {
+  background: #929aab;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  padding: 10px 0;
+  margin: 0;
+}

@@ -1,10 +1,9 @@
-import './App.scss';
 import React, { useEffect, useState } from 'react';
 import TraineeList from './Components/TraineeList';
 import GroupList from './Components/GroupList';
 import { getLocalStorage, setLocalStorage } from './utils/localstorage';
 import shuffle from './utils/shuffle';
-import AddTrainee from './Components/AddTrainee';
+import './App.css';
 
 export default function App() {
   const [trainees, setTrainees] = useState(getLocalStorage('trainees'));
@@ -28,26 +27,25 @@ export default function App() {
         setTrainees(data);
       });
   }, [trainees?.length]);
+  const handleShuffle = () => {
+    const newGroups = shuffle(trainees);
+    setLocalStorage('groups', newGroups);
+    setGroups(newGroups);
+  };
   return (
-    <div data-testid="app" className="App">
+    <div data-testid="app" className="app">
       <section>
-        <p>分组列表</p>
+        <div className="group-header">
+          <p className="section-title">分组列表</p>
+          <button className="shuffle-button" type="button" onClick={handleShuffle}>
+            分组学员
+          </button>
+        </div>
         <GroupList groups={groups} />
-        <button
-          type="button"
-          onClick={() => {
-            const newGroups = shuffle(trainees);
-            setLocalStorage('groups', newGroups);
-            setGroups(newGroups);
-          }}
-        >
-          分组学员
-        </button>
       </section>
       <section>
-        <p>学员列表</p>
-        <TraineeList trainees={trainees} />
-        <AddTrainee addTrainee={addTrainee} />
+        <p className="section-title">学员列表</p>
+        <TraineeList trainees={trainees} addTrainee={addTrainee} />
       </section>
     </div>
   );

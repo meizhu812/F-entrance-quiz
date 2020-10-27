@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './AddTrainee.css';
 
 export default function AddTrainee(props) {
   const [status, setStatus] = useState('OFF');
@@ -13,10 +14,10 @@ export default function AddTrainee(props) {
   };
 
   return status === 'OFF' ? (
-    <button type="button" onClick={() => setStatus('ON')}>
+    <button className="add-button" type="button" onClick={() => setStatus('ON')}>
       + 添加学员
     </button>
   ) : (
-    <input type="text" onKeyUp={handleKeyUp} />
+    <input className="add-input" type="text" onKeyUp={handleKeyUp} />
   );
 }

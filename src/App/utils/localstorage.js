@@ -10,11 +10,6 @@ export function getLocalStorage(key) {
   try {
     return JSON.parse(value) || {};
   } catch (err) {
-    console.error(err);
     return {};
   }
 }
-
-export const removeLocalStorage = (key) => {
-  window.localStorage.removeItem(`${PREFIX}_${key}`);
-};

@@ -1,0 +1,33 @@
+.app {
+  font-size: 14px;
+  min-width: 800px;
+  margin: 0 auto;
+  padding-top: 32px;
+  background: #f7f7f7;
+}
+
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section {
+  padding: 16px;
+}
+
+.section-title {
+  margin: 16px 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.shuffle-button {
+  flex: 0 0 120px;
+  margin: 10px;
+  background: #ea5455;
+  color: white;
+  border: none;
+  width: 120px;
+  height: 36px;
+}

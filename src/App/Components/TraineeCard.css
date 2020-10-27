@@ -1,0 +1,9 @@
+.trainee-card {
+  display: inline-block;
+  flex: 0 0 100px;
+  margin: 8px;
+  padding: 8px 0;
+  width: 100px;
+  text-align: center;
+  background: #eeeeee;
+}

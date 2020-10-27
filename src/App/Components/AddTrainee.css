@@ -1,0 +1,21 @@
+.add-button {
+  background: transparent;
+  color: #393e46;
+  border: 1px solid #393e46;
+  height: 36px;
+  flex: 0 0 100px;
+  margin: 8px;
+  padding: 8px 0;
+  width: 100px;
+}
+
+.add-input {
+  background: transparent;
+  color: #393e46;
+  border: 1px solid #393e46;
+  flex: 0 0 100px;
+  margin: 8px;
+  width: 100px;
+  padding: 0;
+  text-align: center;
+}
