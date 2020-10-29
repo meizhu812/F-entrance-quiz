@@ -1,3 +1,4 @@
+// TODO GTB-4: - 随机分组逻辑应该放在后端
 export default function shuffle(trainees) {
   const groups = [...Array(6).keys()].map((index) => ({
     sequence: index + 1,

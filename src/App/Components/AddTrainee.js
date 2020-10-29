@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './AddTrainee.css';
 
 export default function AddTrainee(props) {
+  // TODO GTB-4: - 这里status，'OFF', 'ON'（magic number） 是否可以采用更能体现业务场景的命名？
   const [status, setStatus] = useState('OFF');
   const { handleAddTrainee } = props;
 
